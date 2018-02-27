@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
 //Name: BlueRobotModel.ma
-//Last modified: Tue, Feb 27, 2018 03:40:36 PM
+//Last modified: Tue, Feb 27, 2018 03:37:49 PM
 //Codeset: 1252
 requires maya "2017ff05";
 requires "stereoCamera" "10.0";
@@ -15,14 +15,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "DB04E300-4D3C-4BB0-DCE5-8192AEF35D23";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.8774113567940498 8.0973909322499527 20.832891775887006 ;
-	setAttr ".r" -type "double3" -2.1383528283540545 -4682.6000000040676 -6.8402645234187095e-017 ;
+	setAttr ".t" -type "double3" -4.5904245708930542 12.123346382643216 30.91459974682688 ;
+	setAttr ".r" -type "double3" -10.538352828466467 -4694.6000000035592 2.054177780455265e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CC0963B7-4FEE-36D0-55E1-6C9298C5A8DA";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 21.591379885244788;
+	setAttr ".coi" 31.827469115359598;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -52373,57 +52373,10 @@ createNode nurbsCurve -n "BlueRobot_Chest_ctrlShape" -p "|BlueRobot|BlueRobot_ct
 createNode transform -n "BlueRobot_Head_ctrl_grp" -p "|BlueRobot|BlueRobot_ctrl_grp|BlueRobot_ctrl|BlueRobot_COG_ctrl_grp|BlueRobot_COG_ctrl|BlueRobot_Chest_ctrl_grp|BlueRobot_Chest_ctrl";
 	rename -uid "4B1D18D7-4A6A-C8B8-B0BB-528CE12BD414";
 	setAttr ".t" -type "double3" 6.8014312688320144 6.7067290344116499e-031 -1.5102211190125596e-015 ;
-createNode transform -n "BlueRobot_Chest_ctrl" -p "|BlueRobot|BlueRobot_ctrl_grp|BlueRobot_ctrl|BlueRobot_COG_ctrl_grp|BlueRobot_COG_ctrl|BlueRobot_Chest_ctrl_grp|BlueRobot_Chest_ctrl|BlueRobot_Head_ctrl_grp";
+createNode transform -n "BlueRobot_Chest_ctrl" -p "BlueRobot_Head_ctrl_grp";
 	rename -uid "D31191F8-4D54-03F5-95E1-6B98DF66571D";
 createNode nurbsCurve -n "BlueRobot_Chest_ctrlShape" -p "|BlueRobot|BlueRobot_ctrl_grp|BlueRobot_ctrl|BlueRobot_COG_ctrl_grp|BlueRobot_COG_ctrl|BlueRobot_Chest_ctrl_grp|BlueRobot_Chest_ctrl|BlueRobot_Head_ctrl_grp|BlueRobot_Chest_ctrl";
 	rename -uid "9F88E05C-4522-BC5A-05E1-63B404287A9D";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-2.0276449215689203 9.00455231076034e-016 -2.0276449215689172
-		3.2715008125425845e-016 -1.4528382108658742e-031 -2.8675229477596953
-		2.0276449215689185 -9.0045523107603321e-016 -2.0276449215689185
-		2.8675229477596953 -1.2734360000975255e-015 -8.3093641050087146e-016
-		2.027644921568919 -9.0045523107603341e-016 2.0276449215689181
-		8.6404062707720509e-016 -3.8371111935706862e-031 2.8675229477596957
-		-2.0276449215689172 9.0045523107603262e-016 2.0276449215689185
-		-2.8675229477596953 1.2734360000975255e-015 1.5401521690175789e-015
-		-2.0276449215689203 9.00455231076034e-016 -2.0276449215689172
-		3.2715008125425845e-016 -1.4528382108658742e-031 -2.8675229477596953
-		2.0276449215689185 -9.0045523107603321e-016 -2.0276449215689185
-		;
-createNode transform -n "BlueRobot_L_Shoulder_ctrl_grp" -p "|BlueRobot|BlueRobot_ctrl_grp|BlueRobot_ctrl|BlueRobot_COG_ctrl_grp|BlueRobot_COG_ctrl|BlueRobot_Chest_ctrl_grp|BlueRobot_Chest_ctrl";
-	rename -uid "236FAF5D-41FA-1225-4024-7CB23DD1BBBC";
-createNode transform -n "BlueRobot_Chest_ctrl" -p "BlueRobot_L_Shoulder_ctrl_grp";
-	rename -uid "0CC2F636-4405-D4C0-F730-FF8F29729AB3";
-createNode nurbsCurve -n "BlueRobot_Chest_ctrlShape" -p "|BlueRobot|BlueRobot_ctrl_grp|BlueRobot_ctrl|BlueRobot_COG_ctrl_grp|BlueRobot_COG_ctrl|BlueRobot_Chest_ctrl_grp|BlueRobot_Chest_ctrl|BlueRobot_L_Shoulder_ctrl_grp|BlueRobot_Chest_ctrl";
-	rename -uid "DB0BF3D6-4F27-AD7A-4B7F-AD8BFC3401CA";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		4.50227615538017e-016 2.0276449215689203 -2.0276449215689172
-		-7.264191054329371e-032 -3.2715008125425845e-016 -2.8675229477596953
-		-4.502276155380166e-016 -2.0276449215689185 -2.0276449215689185
-		-6.3671800004876273e-016 -2.8675229477596953 -8.3093641050087146e-016
-		-4.502276155380167e-016 -2.027644921568919 2.0276449215689181
-		-1.9185555967853431e-031 -8.6404062707720509e-016 2.8675229477596957
-		4.5022761553801631e-016 2.0276449215689172 2.0276449215689185
-		6.3671800004876273e-016 2.8675229477596953 1.5401521690175789e-015
-		4.50227615538017e-016 2.0276449215689203 -2.0276449215689172
-		-7.264191054329371e-032 -3.2715008125425845e-016 -2.8675229477596953
-		-4.502276155380166e-016 -2.0276449215689185 -2.0276449215689185
-		;
-createNode transform -n "BlueRobot_Head_ctrl_grp" -p "|BlueRobot|BlueRobot_ctrl_grp|BlueRobot_ctrl|BlueRobot_COG_ctrl_grp|BlueRobot_COG_ctrl|BlueRobot_Chest_ctrl_grp|BlueRobot_Chest_ctrl|BlueRobot_L_Shoulder_ctrl_grp|BlueRobot_Chest_ctrl";
-	rename -uid "C25E879B-48F6-0289-8126-6C9D40766A56";
-	setAttr ".t" -type "double3" 6.8014312688320144 6.7067290344116499e-031 -1.5102211190125596e-015 ;
-createNode transform -n "BlueRobot_Chest_ctrl" -p "|BlueRobot|BlueRobot_ctrl_grp|BlueRobot_ctrl|BlueRobot_COG_ctrl_grp|BlueRobot_COG_ctrl|BlueRobot_Chest_ctrl_grp|BlueRobot_Chest_ctrl|BlueRobot_L_Shoulder_ctrl_grp|BlueRobot_Chest_ctrl|BlueRobot_Head_ctrl_grp";
-	rename -uid "3BF00EBF-4B4F-D4C5-31A5-E681FD7797DC";
-createNode nurbsCurve -n "BlueRobot_Chest_ctrlShape" -p "|BlueRobot|BlueRobot_ctrl_grp|BlueRobot_ctrl|BlueRobot_COG_ctrl_grp|BlueRobot_COG_ctrl|BlueRobot_Chest_ctrl_grp|BlueRobot_Chest_ctrl|BlueRobot_L_Shoulder_ctrl_grp|BlueRobot_Chest_ctrl|BlueRobot_Head_ctrl_grp|BlueRobot_Chest_ctrl";
-	rename -uid "4A9B8812-48F8-F4EB-DE4D-42815F3C0D4A";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
 		3 8 2 no 3
